@@ -1,0 +1,5 @@
+obj/
+bin/
+AssemblyInfo.cs
+.vs/
+Win32/
