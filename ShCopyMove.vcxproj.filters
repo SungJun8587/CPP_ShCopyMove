@@ -3,73 +3,67 @@
   <ItemGroup>
     <Filter Include="소스 파일">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="헤더 파일">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
     <Filter Include="리소스 파일">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\General">
-      <UniqueIdentifier>{539c714f-9eb3-40fc-8de6-7cfdf13cf6c0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\General">
-      <UniqueIdentifier>{92f02a47-a209-4ec7-8d8c-0ad217ecf49b}</UniqueIdentifier>
+    <Filter Include="헤더 파일\Common">
+      <UniqueIdentifier>{c98d3c90-7564-4747-a91e-ca8f4d8bb6c4}</UniqueIdentifier>
     </Filter>
     <Filter Include="헤더 파일\DataStructures">
-      <UniqueIdentifier>{50ca24c1-1744-41b9-9c04-0c4fc6e7453b}</UniqueIdentifier>
+      <UniqueIdentifier>{4654bd76-45ef-4ce9-ab91-5fedf6dbd651}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Common">
+      <UniqueIdentifier>{f04a817a-119c-4c08-8616-24c0d9d87178}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
+    <ClCompile Include="ShCopyMove.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\Common\MemBuffer.cpp">
+      <Filter>소스 파일\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\Common\ShellUtil.cpp">
+      <Filter>소스 파일\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\Common\StringUtil.cpp">
+      <Filter>소스 파일\Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="pch.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="..\Library\Common\Common.h">
+      <Filter>헤더 파일\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\Common\MemBuffer.h">
+      <Filter>헤더 파일\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\Common\ShellUtil.h">
+      <Filter>헤더 파일\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\Common\StringUtil.h">
+      <Filter>헤더 파일\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\Common\WebCommon.h">
+      <Filter>헤더 파일\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\DataStructures\BaseDoublyLinkedList.h">
+      <Filter>헤더 파일\DataStructures</Filter>
     </ClInclude>
     <ClInclude Include="ShCopyMoveAll.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="..\Common\Common.h">
-      <Filter>헤더 파일\General</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Common\MemBuffer.h">
-      <Filter>헤더 파일\General</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Common\ShellUtil.h">
-      <Filter>헤더 파일\General</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Common\StringUtil.h">
-      <Filter>헤더 파일\General</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Common\WebCommon.h">
-      <Filter>헤더 파일\General</Filter>
-    </ClInclude>
-    <ClInclude Include="..\DataStructures\BaseDoublyLinkedList.h">
-      <Filter>헤더 파일\DataStructures</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="ShCopyMove.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Common\MemBuffer.cpp">
-      <Filter>소스 파일\General</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Common\ShellUtil.cpp">
-      <Filter>소스 파일\General</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Common\StringUtil.cpp">
-      <Filter>소스 파일\General</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

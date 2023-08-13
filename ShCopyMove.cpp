@@ -4,11 +4,11 @@
 //
 //***************************************************************************
 
-#include "stdafx.h"
+#include "pch.h"
 
 //***************************************************************************
 //
-BOOL SHDirectoryRecursive(const TCHAR *ptszSourceFolder, const TCHAR *ptszDestFolder, SH_APPLY_FILEINFO &ShApplyFileInfo, CBaseDoublyLinkedList<SH_FILESYSTEM_INFO *> &MemBufferFrom, CBaseDoublyLinkedList<SH_FILESYSTEM_INFO *> &MemBufferTo)
+BOOL SHDirectoryRecursive(const TCHAR* ptszSourceFolder, const TCHAR* ptszDestFolder, SH_APPLY_FILEINFO& ShApplyFileInfo, CBaseDoublyLinkedList<SH_FILESYSTEM_INFO*>& MemBufferFrom, CBaseDoublyLinkedList<SH_FILESYSTEM_INFO*>& MemBufferTo)
 {
 	BOOL		bResult = true;
 	TCHAR		tszActiveFolder[DIRECTORY_STRLEN + 16];
@@ -20,8 +20,8 @@ BOOL SHDirectoryRecursive(const TCHAR *ptszSourceFolder, const TCHAR *ptszDestFo
 	WIN32_FIND_DATA		FindData;
 	HANDLE				hFindFile;
 
-	SH_FILESYSTEM_INFO		*pFileFrom = NULL;
-	SH_FILESYSTEM_INFO		*pFileTo = NULL;
+	SH_FILESYSTEM_INFO* pFileFrom = NULL;
+	SH_FILESYSTEM_INFO* pFileTo = NULL;
 
 	if( !ptszSourceFolder || !ptszDestFolder ) return false;
 	if( _tcslen(ptszSourceFolder) < 1 || _tcslen(ptszDestFolder) < 1 ) return false;
@@ -104,11 +104,11 @@ int main(int argc, TCHAR* argv[])
 	TCHAR	tszSrcFullPath[FULLPATH_STRLEN];
 	TCHAR	tszDestFullPath[FULLPATH_STRLEN];
 
-	TCHAR	*pszFrom = NULL;
-	TCHAR	*pszTo = NULL;
+	TCHAR* pszFrom = NULL;
+	TCHAR* pszTo = NULL;
 
-	SH_FILESYSTEM_INFO	*pFileFrom = NULL;
-	SH_FILESYSTEM_INFO	*pFileTo = NULL;
+	SH_FILESYSTEM_INFO* pFileFrom = NULL;
+	SH_FILESYSTEM_INFO* pFileTo = NULL;
 
 	MEMORY_CHAR_BUFFER	CharBufferFrom;
 	MEMORY_CHAR_BUFFER	CharBufferTo;
@@ -120,8 +120,8 @@ int main(int argc, TCHAR* argv[])
 
 	SHFILEOPSTRUCT		ShFile;
 
-	CBaseDoublyLinkedList<SH_FILESYSTEM_INFO *>	MemBufferFrom;
-	CBaseDoublyLinkedList<SH_FILESYSTEM_INFO *>	MemBufferTo;
+	CBaseDoublyLinkedList<SH_FILESYSTEM_INFO*>	MemBufferFrom;
+	CBaseDoublyLinkedList<SH_FILESYSTEM_INFO*>	MemBufferTo;
 
 	memset(&ShApplyFileInfo, 0, sizeof(ShApplyFileInfo));
 
@@ -156,11 +156,11 @@ int main(int argc, TCHAR* argv[])
 		else ShApplyFileInfo.m_bIsApply = false;
 	}
 	if( argc > 5 ) StringCchCopy(ShApplyFileInfo.m_tszApplyExt, _countof(ShApplyFileInfo.m_tszApplyExt), argv[5]);				// 적용할 확장자(Ex. ".asp;.htm;.html")
-	
+
 	// 수정 일시가 시작 일시(m_tszModifyStDate), 종료 일시(m_tszModifyEdDate) 사이에 있는 것만 적용
 	if( argc > 6 ) StringCchCopy(ShApplyFileInfo.m_tszModifyStDate, _countof(ShApplyFileInfo.m_tszModifyStDate), argv[6]);		// 수정 일시을 기준으로 시작 일시 
 	if( argc > 7 ) StringCchCopy(ShApplyFileInfo.m_tszModifyEdDate, _countof(ShApplyFileInfo.m_tszModifyEdDate), argv[7]);		// 수정 일시을 기준으로 종료 일시
-	
+
 
 	StrReplace(TSrcFullPath, tszSrcFullPath, _T(";32;"), _T(" "));
 	StrReplace(TDestFullPath, tszDestFullPath, _T(";32;"), _T(" "));
