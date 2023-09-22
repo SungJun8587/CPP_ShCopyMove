@@ -10,8 +10,8 @@
 // Version Define
 //***************************************************************************
 
-#include <Common.h>
-#include <WebCommon.h>
+#include <BaseDefine.h>
+#include <BaseReDefineDataType.h>
 #include <MemBuffer.h>
 #include <StringUtil.h>
 #include <ShellUtil.h>

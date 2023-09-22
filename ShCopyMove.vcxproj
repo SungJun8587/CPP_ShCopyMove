@@ -126,47 +126,47 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\UtilCore;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\UtilCore;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\UtilCore;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\UtilCore;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\UtilCore;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\UtilCore;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\UtilCore;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>E:\GitHub\CPP\Library\Common;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>E:\GitHub\CPP\Library\UtilCore;E:\GitHub\CPP\Library\DataStructures;$(ProjectDir);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -293,9 +293,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Library\Common\MemBuffer.cpp" />
-    <ClCompile Include="..\Library\Common\ShellUtil.cpp" />
-    <ClCompile Include="..\Library\Common\StringUtil.cpp" />
+    <ClCompile Include="..\Library\UtilCore\MemBuffer.cpp" />
+    <ClCompile Include="..\Library\UtilCore\ShellUtil.cpp" />
+    <ClCompile Include="..\Library\UtilCore\StringUtil.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">Create</PrecompiledHeader>
@@ -309,11 +309,11 @@
     <ClCompile Include="ShCopyMove.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Library\Common\Common.h" />
-    <ClInclude Include="..\Library\Common\MemBuffer.h" />
-    <ClInclude Include="..\Library\Common\ShellUtil.h" />
-    <ClInclude Include="..\Library\Common\StringUtil.h" />
-    <ClInclude Include="..\Library\Common\WebCommon.h" />
+    <ClInclude Include="..\Library\UtilCore\BaseDefine.h" />
+    <ClInclude Include="..\Library\UtilCore\BaseRedefineDataType.h" />
+    <ClInclude Include="..\Library\UtilCore\MemBuffer.h" />
+    <ClInclude Include="..\Library\UtilCore\ShellUtil.h" />
+    <ClInclude Include="..\Library\UtilCore\StringUtil.h" />
     <ClInclude Include="..\Library\DataStructures\BaseDoublyLinkedList.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="ShCopyMoveAll.h" />

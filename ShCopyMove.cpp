@@ -161,7 +161,6 @@ int main(int argc, TCHAR* argv[])
 	if( argc > 6 ) StringCchCopy(ShApplyFileInfo.m_tszModifyStDate, _countof(ShApplyFileInfo.m_tszModifyStDate), argv[6]);		// 수정 일시을 기준으로 시작 일시 
 	if( argc > 7 ) StringCchCopy(ShApplyFileInfo.m_tszModifyEdDate, _countof(ShApplyFileInfo.m_tszModifyEdDate), argv[7]);		// 수정 일시을 기준으로 종료 일시
 
-
 	StrReplace(TSrcFullPath, tszSrcFullPath, _T(";32;"), _T(" "));
 	StrReplace(TDestFullPath, tszDestFullPath, _T(";32;"), _T(" "));
 
@@ -171,8 +170,7 @@ int main(int argc, TCHAR* argv[])
 	for( int i = 0; i < MemBufferFrom.GetCount(); i++ )
 	{
 		pFileFrom = MemBufferFrom.At(i);
-
-		MemBufferAddBuffer(&CharBufferFrom, pFileFrom->m_tszFullPath, _tcslen(pFileFrom->m_tszFullPath) + 1);
+		if( pFileFrom ) MemBufferAddBuffer(&CharBufferFrom, pFileFrom->m_tszFullPath, _tcslen(pFileFrom->m_tszFullPath) + 1);
 
 		if( pFileFrom )
 		{
@@ -187,8 +185,7 @@ int main(int argc, TCHAR* argv[])
 	for( int i = 0; i < MemBufferTo.GetCount(); i++ )
 	{
 		pFileTo = MemBufferTo.At(i);
-
-		MemBufferAddBuffer(&CharBufferTo, pFileTo->m_tszFullPath, _tcslen(pFileTo->m_tszFullPath) + 1);
+		if( pFileTo ) MemBufferAddBuffer(&CharBufferTo, pFileTo->m_tszFullPath, _tcslen(pFileTo->m_tszFullPath) + 1);
 
 		if( pFileTo )
 		{
