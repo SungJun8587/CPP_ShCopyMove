@@ -12,10 +12,9 @@
 
 #include <BaseDefine.h>
 #include <BaseReDefineDataType.h>
-#include <MemBuffer.h>
-#include <StringUtil.h>
-#include <ShellUtil.h>
-#include <BaseDoublyLinkedList.h>
+#include <Memory/MemBuffer.h>
+#include <Util/StringUtil.h>
+#include <Util/ShellUtil.h>
 
 #define  _DEBUGLOG				  // Enable Logging For Monitoring System
 

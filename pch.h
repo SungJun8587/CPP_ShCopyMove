@@ -15,10 +15,16 @@
 #include <crtdbg.h>
 #include <malloc.h>
 #include <strsafe.h>
+#include <vector>
 
-//***************************************************************************
-// customized or added header Files for the ShCopyMove
-#include "ShCopyMoveAll.h"
-//***************************************************************************
+#include <BaseDefine.h>
+#include <BaseReDefineDataType.h>
+#include <Memory/MemBuffer.h>
+#include <Util/ConvertCharset.h>
+#include <Util/StringUtil.h>
+#include <Util/FileUtil.h>
+#include <Util/ShellUtil.h>
+
+#define  _DEBUGLOG				  // Enable Logging For Monitoring System
 
 #endif //PCH_H
