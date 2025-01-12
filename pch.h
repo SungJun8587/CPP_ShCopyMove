@@ -19,7 +19,14 @@
 
 #include <BaseDefine.h>
 #include <BaseReDefineDataType.h>
+#include <BaseMacro.h>
+
+#pragma comment(lib, LIB_NAME("libiconv"))
+
+#include <iconv.h>
+
 #include <Memory/MemBuffer.h>
+#include <Util/IconvUtil.h>
 #include <Util/ConvertCharset.h>
 #include <Util/StringUtil.h>
 #include <Util/FileUtil.h>

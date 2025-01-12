@@ -29,6 +29,9 @@
     <ClCompile Include="..\Library\UtilCore\Util\ConvertCharset.cpp">
       <Filter>UtilCore\Util</Filter>
     </ClCompile>
+    <ClCompile Include="..\Library\UtilCore\Util\IconvUtil.cpp">
+      <Filter>UtilCore\Util</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -52,6 +55,12 @@
     </ClInclude>
     <ClInclude Include="..\Library\UtilCore\Util\ConvertCharset.h">
       <Filter>UtilCore\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\UtilCore\Util\IconvUtil.h">
+      <Filter>UtilCore\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\UtilCore\BaseMacro.h">
+      <Filter>UtilCore</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
